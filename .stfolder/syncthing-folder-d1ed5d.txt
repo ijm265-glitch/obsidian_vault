@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: ovff7-psv2r
+created: 2026-07-14T10:39:55+09:00

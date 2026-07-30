@@ -1,0 +1,281 @@
+{
+  "main": {
+    "id": "8ca4c6f105d616e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd12a29fa7b5f4e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6287161095aeb4c0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e958e401f3dedd4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bd568c13493e12d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e248c3dcbaf8eab2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "952a853aa1267f40",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d3b76c278f13fcb6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ddae9b4777676623",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4175e6d7fe1ce0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6ccb6f22c6fcc6c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "5497334d31edbe95",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "9b4ab67b31ce1a52",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1d43d64801e43cee",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "79a954b536ed4495",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          },
+          {
+            "id": "b97f80678d430b38",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "floating": {
+    "id": "3ba916c5b42653fa",
+    "type": "floating",
+    "children": [
+      {
+        "id": "8044c2e9ff06e2ae",
+        "type": "window",
+        "children": [
+          {
+            "id": "eaee963c57b9ae28",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "9ecaecdd36b72e97",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "네트워크/네트워크 개요.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "네트워크 개요"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1232,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "9ecaecdd36b72e97",
+  "lastOpenFiles": [
+    "2.1 LAN과 이더넷.md",
+    "네트워크/네트워크 개요.md",
+    "1.3 1계층 네트워크 장비.md",
+    "2.2 CSMA CD 프로토콜.md",
+    "1.2 물리적 전송 매체.md",
+    "0.3 OSI 7계층과 TCP 4계층 모델.md",
+    "상쇄 간섭 및 차동 신호(Differential Signaling).md",
+    "1.1 디지털 신호와 아날로그 신호.md",
+    "0.4 데이터 전송 단위 PDU.md",
+    "0.2 직렬 통신과 병렬 통신.md",
+    "0.1 네트워크의 정의와 통신 방식.md",
+    "네트워크/HTTP/통신의 흐름 (요청과 응답).md",
+    "네트워크/HTTP/HTTP 메시지 구조 (헤더와 바디).md",
+    "Csharp/files/Button.md",
+    "네트워크/files",
+    "ESP32/CamWebServer_Configuration.md",
+    "ESP32/Serial Communication Protocols.md",
+    "Csharp/WinForms 개요.md",
+    "Csharp/CSharp 개요.md",
+    "Pointer.md",
+    "Csharp/files/CSharp 클래스와 캡슐화 (접근 제한자, Property).md",
+    "Csharp/files/vtable.md",
+    "Csharp/files/CSharp 소멸자와 가비지 컬렉터 (GC)-editing.md",
+    "Csharp/Winforms/Untitled.md",
+    "Csharp/files/CSharp 패턴 매칭 (is 연산자, switch expression).md",
+    "Csharp/files/CSharp 추상 클래스 vs 인터페이스.md",
+    "Csharp/files/CSharp 제네릭 클래스와 메서드 설계.md",
+    "Csharp/Winforms",
+    "Csharp/files",
+    "Csharp",
+    "Images/Pasted image 20260723112141.png",
+    "Csharp/New folder",
+    "전기기능사/교재.pdf",
+    "Images/Pasted image 20260716104111.png",
+    "Images/Pasted image 20260716103219.png",
+    "전기기능사/문제",
+    "Images/Pasted image 20260716100748.png",
+    "전기기능사/개념",
+    "Images/Pasted image 20260716092509.png",
+    "Images/Pasted image 20260716092257.png",
+    "Images/Pasted image 20260716090057.png",
+    "Images/Pasted image 20260716085047.png",
+    "Images/Pasted image 20260714142736.png",
+    "자소서/디와이오토/~syncthing~Untitled.md.tmp",
+    "전기기능사/~syncthing~교재.pdf.tmp",
+    "Images/Pasted image 20260711220047.png"
+  ]
+}

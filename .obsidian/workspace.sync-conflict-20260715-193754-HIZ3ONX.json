@@ -1,0 +1,274 @@
+{
+  "main": {
+    "id": "8ca4c6f105d616e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "703677467ad04a58",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54289d4771ecb325",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e958e401f3dedd4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bd568c13493e12d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e248c3dcbaf8eab2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "952a853aa1267f40",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d3b76c278f13fcb6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ddae9b4777676623",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4175e6d7fe1ce0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6ccb6f22c6fcc6c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "5497334d31edbe95",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "9b4ab67b31ce1a52",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1d43d64801e43cee",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "79a954b536ed4495",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          },
+          {
+            "id": "b97f80678d430b38",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "floating": {
+    "id": "d920655da9dfe415",
+    "type": "floating",
+    "children": [
+      {
+        "id": "4658a94af454666f",
+        "type": "window",
+        "children": [
+          {
+            "id": "1ddd826f5f18b0e1",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "826826248b2a7d7c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "전기기능사/교재.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "교재"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1232,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "54289d4771ecb325",
+  "lastOpenFiles": [
+    "전기기능사/교재.pdf",
+    "전기기능사/페이저.md",
+    "Untitled.md",
+    "전기기능사/전속과 전속밀도, 자속과 자속밀도.md",
+    "전기기능사/정전기와 커패시터.md",
+    "자소서/디와이오토/Untitled.md",
+    "Python/FastAPI/미들웨어.md",
+    "자소서/디와이오토/~syncthing~Untitled.md.tmp",
+    "전기기능사/~syncthing~교재.pdf.tmp",
+    "전기기능사/~syncthing~정전기와 커패시터.md.tmp",
+    "자소서/디와이오토",
+    "전기기능사",
+    "자소서",
+    "Python/FastAPI/예외처리.md",
+    "Python/FastAPI/의존성 주입 (Dependency Injection).md",
+    "Python/FastAPI/Untitled",
+    "Python/FastAPI/APIRouter.md",
+    "Python/FastAPI/API 작성.md",
+    "Python/FastAPI/Header.md",
+    "Python/Basic/iterable, iterator.md",
+    "네트워크/HTTP/HTTP 메시지 구조 (헤더와 바디).md",
+    "컴퓨터 구조/HTTP 메서드와 상태코드.md",
+    "네트워크/HTTP/통신의 흐름 (요청과 응답).md",
+    "네트워크/HTTP.md",
+    "네트워크/HTTP",
+    "네트워크",
+    "Python/Basic/함수, 제너레이터, 클래스의 메모리 생성 타이밍.md",
+    "Python/Basic/모듈 임포트 시스템.md",
+    "Python/typing/타입힌트를 사용한 클래스 생성.md",
+    "Python/typing/typing.md",
+    "Excalidraw/3상 4선.md",
+    "Excalidraw/Drawing 2026-07-11 21.56.23.excalidraw.md",
+    "전기공학/3상 4선식.md",
+    "Excalidraw/Drawing 2026-07-12 03.11.56.excalidraw.md",
+    "컴퓨터 구조/스레딩과 멀티프로세싱.md",
+    "Images/Pasted image 20260711220047.png",
+    "Images/Pasted image 20260707205143.png",
+    "Images/Pasted image 20260711220444.png",
+    "Images/Pasted image 20260711220635.png",
+    "Images/Pasted image 20260707204653.png",
+    "Pasted image 20260711220644.png"
+  ]
+}

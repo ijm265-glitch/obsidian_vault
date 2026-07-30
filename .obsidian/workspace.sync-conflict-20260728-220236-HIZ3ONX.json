@@ -1,0 +1,281 @@
+{
+  "main": {
+    "id": "8ca4c6f105d616e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "30b710b6b612086d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a1f4290ee654f1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Python/opencv/0102_Image_basic.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0102_Image_basic"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e958e401f3dedd4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bd568c13493e12d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e248c3dcbaf8eab2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "952a853aa1267f40",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d3b76c278f13fcb6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ddae9b4777676623",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4175e6d7fe1ce0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6ccb6f22c6fcc6c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "5497334d31edbe95",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "9b4ab67b31ce1a52",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1d43d64801e43cee",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "79a954b536ed4495",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          },
+          {
+            "id": "b97f80678d430b38",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "floating": {
+    "id": "d6acb5e9b6e44984",
+    "type": "floating",
+    "children": [
+      {
+        "id": "563fcbdd148b0e61",
+        "type": "window",
+        "children": [
+          {
+            "id": "90bce3194ecd468e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1eb90ba4b5b0b463",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2683,
+        "y": 27,
+        "width": 1030,
+        "height": 805,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "1eb90ba4b5b0b463",
+  "lastOpenFiles": [
+    "Python/opencv/0102_Image_basic.md",
+    "Python/opencv/03_image_annotation.md",
+    "Python/opencv/Untitled.md",
+    "네트워크/네트워크 개요.md",
+    "Python/opencv",
+    "네트워크/files/브로드캐스트가 발생하는 케이스.md",
+    "네트워크/files/데이터 흐름 - LAN, LAN+WAN.md",
+    "네트워크/files/CAN 버스의 기본 구조.md",
+    "네트워크/files/C.2 서버와 포트 포워딩.md",
+    "네트워크/files/C.1 Socket.md",
+    "네트워크/files/B.4 산업용 이더넷과 Fieldbus.md",
+    "네트워크/files/B.3 차량 및 로봇 제어망 CAN 통신.md",
+    "네트워크/files/B.2 산업용 프로토콜 Modbus.md",
+    "네트워크/files/B.1 시리얼 인터페이스 표준.md",
+    "네트워크/files/A.4 무선 보안 프로토콜.md",
+    "네트워크/files/A.3 와이파이 네트워크 구성 장비.md",
+    "네트워크/files/A.2 CSMA CA 프로토콜.md",
+    "네트워크/files/A.1 무선 통신의 기초와 IEEE 802.11 표준.md",
+    "네트워크/files/6.2 웹 브라우저에 주소를 입력했을 때 일어나는 일.md",
+    "네트워크/files/6.1 통신사망과 WAN.md",
+    "네트워크/files/5.4 기타 주요 응용 프로토콜.md",
+    "네트워크/files/5.3 HTTPS와 암호화.md",
+    "네트워크/files/5.2 HTTP 프로토콜.md",
+    "네트워크/files/5.1 DNS 작동 원리.md",
+    "네트워크/files/4.5 UDP 프로토콜의 특성.md",
+    "네트워크/files/4.4 TCP의 흐름 제어 및 혼잡 제어.md",
+    "네트워크/files/4.3 TCP 연결 수립과 해제.md",
+    "ESP32/OLED/u8g2_128x32/u8g2_128x32.ino",
+    "ESP32/ESP32-Wroom/sketch_jul26b/sketch_jul26b.ino",
+    "ESP32/ESP32-S3-CAM/u8g2_128x32/u8g2_128x32.ino",
+    "ESP32/ESP32-S3-CAM/u8g2_128x32",
+    "ESP32/ESP32-S3-CAM",
+    "ESP32/OLED/u8g2_128x32",
+    "ESP32/OLED",
+    "ESP32/ESP32-Wroom/sketch_jul26b",
+    "ESP32/ESP32-Wroom",
+    "Images/Pasted image 20260716104111.png",
+    "Images/Pasted image 20260723112141.png",
+    "Images/Pasted image 20260716092509.png",
+    "Images/Pasted image 20260716100748.png",
+    "Images/Pasted image 20260716092257.png",
+    "Images/Pasted image 20260716103219.png",
+    "Images/Pasted image 20260716085047.png",
+    "Images/Pasted image 20260716090057.png",
+    "Images/Pasted image 20260714142736.png",
+    "Pasted image 20260714142736.png"
+  ]
+}
