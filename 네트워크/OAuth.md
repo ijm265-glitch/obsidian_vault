@@ -41,7 +41,7 @@ OAuth는 권한을 부여받았다는 증표로 '토큰'을 발급하고 검증�
     3. **Authorization Server:** 권한을 인증하고 토큰을 발급하는 서버 (예: Google, Kakao 인증 서버)
     4. **Resource Server:** 실제 사용자 데이터가 있는 서버 (예: Google Calendar API)
         
-- **핵심 승인 방식 (Grant Types)**
+- **[[핵심 승인 방식]] (Grant Types)**
     - **Authorization Code Grant (권한 부여 코드 승인 방식):** 가장 대표적이고 안전한 웹 애플리케이션용 플로우
     - Client Credentials Grant (클라이언트 자격 증명 방식): 사용자 개입 없이 서버 대 서버 통신 시 사용
         
