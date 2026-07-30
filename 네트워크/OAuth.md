@@ -45,7 +45,7 @@ OAuth는 권한을 부여받았다는 증표로 '토큰'을 발급하고 검증�
     - **Authorization Code Grant (권한 부여 코드 승인 방식):** 가장 대표적이고 안전한 웹 애플리케이션용 플로우
     - Client Credentials Grant (클라이언트 자격 증명 방식): 사용자 개입 없이 서버 대 서버 통신 시 사용
         
-- **OIDC (OpenID Connect)**
+- **[[OIDC (OpenID Connect)]]**
     - OAuth 2.0(인가) 위에서 동작하는 **인증(Authentication)** 레이어
     - `ID Token`의 개념과 소셜 로그인 구현 시 OAuth 2.0 + OIDC가 쓰이는 방식
 
