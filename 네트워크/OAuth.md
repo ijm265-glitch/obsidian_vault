@@ -30,7 +30,7 @@ OAuth는 권한을 부여받았다는 증표로 '토큰'을 발급하고 검증�
     - [[`Access Token` vs `Refresh Token`의 역할과 유효기간 관리 전략]]
     - 토큰을 어디에 저장할 것인가? (LocalStorage vs HttpOnly Cookie)
         
-- **보안 공격 기법에 대한 이해**
+- **[[보안 공격 기법에 대한 이해]]**
     - **CSRF (Cross-Site Request Forgery):** 타인의 권한을 도용하여 요청을 보낼 때 발생하는 위협 (OAuth의 `state` 파라미터가 필요한 이유)
     - **PKCE (Proof Key for Code Exchange):** 모바일/Single Page App에서 Authorization Code를 탈취당하지 않기 위해 사용하는 보안 확장 표준
 ### Phase 4. OAuth 2.0 핵심 동작 메커니즘
