@@ -46,9 +46,6 @@
     
 - 출력 조건
     - Up 출력 : CV가 PV 이상(CV >= PV)일 때 On
-        
-    
-        
 
 ### 4. CTR (Ring Counter)
 
