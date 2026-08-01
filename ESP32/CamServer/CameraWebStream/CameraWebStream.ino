@@ -15,7 +15,7 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "hotspot3157";
+const char *ssid = "iptime_ljy";
 const char *password = "ijm79470!";
 
 void startCameraServer();
