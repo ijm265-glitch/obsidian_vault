@@ -13,12 +13,12 @@ plt.imshow(annotated_frame)
 ```
 
 ### Results 객체
-1. **results\[0\].boxes (바운딩 박스 정보)**
-	- **`results[0].boxes.xyxy`**: 각 물체의 테두리 좌표 `[xmin, ymin, xmax, ymax]`
+1. **results\[0\].boxes (바운딩 박스 정보 - 이미지 한 장에서 모델이 인식한 모든 객체들의 묶음)**
+	- **`results[0].boxes[0].xyxy`**: 각 물체의 테두리 좌표 `[xmin, ymin, xmax, ymax]`
     
-	- **`results[0].boxes.conf`**: 신뢰도 점수 (예: `0.95` -> 95% 확신)
+	- **`results[0].boxes[0].conf`**: 신뢰도 점수 (예: `0.95` -> 95% 확신)
     
-	- **`results[0].boxes.cls`**: 감지된 클래스 번호 (예: `0.0` -> 사람, `2.0` -> 자동차)
+	- **`results[0].boxes[0].cls`**: 감지된 클래스 번호 (예: `0.0` -> 사람, `2.0` -> 자동차)
 2. `results[0].names` (클래스 이름 사전)
 	클래스 번호와 이름이 매핑되어 있는 딕셔너리입니다.
 	- 예: `{0: 'person', 1: 'bicycle', 2: 'car', ...}`
