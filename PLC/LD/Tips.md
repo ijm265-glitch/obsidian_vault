@@ -1,0 +1,1 @@
+- Rising의 경우와 Falling의 경우를 분리해서 Counter로 처리하면 구현하기 쉬워짐
