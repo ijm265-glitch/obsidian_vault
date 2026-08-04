@@ -1,0 +1,1 @@
+JSON 형태의 텍스트 데이터를 파이썬 Dictionary/List 객체로 변환
