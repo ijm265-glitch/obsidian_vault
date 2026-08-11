@@ -83,3 +83,15 @@ if p2:
 ```
 
 ## 원버튼 온오프
+![[Pasted image 20260811134959.png]]LD에서는 다음과 같이 복잡한 구조로 구성해야 하지만 ST를 이용하면 다음과 같이 간단하게 구성할 수 있다.
+#### 변수 선언
+![[Pasted image 20260811135506.png]]
+```pascal
+r_trig_0(CLK:=btn0);
+
+IF r_trig_0.Q THEN
+	lamp := NOT lamp;
+
+END_IF;
+```
+
