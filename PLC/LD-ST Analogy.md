@@ -95,3 +95,27 @@ IF r_trig_0.Q THEN
 END_IF;
 ```
 
+## 순차 점등
+![[Pasted image 20260811141920.png]]
+```pascal
+r_trig_0(CLK:=btn0);
+
+IF r_trig_0.Q THEN
+	
+	CASE c0 OF
+		0 : lamp0 := TRUE; lamp1 := FALSE; lamp2 := FALSE;
+		1 : lamp0 := FALSE; lamp1 := TRUE; lamp2 := FALSE;
+		2 : lamp0 := FALSE; lamp1 := FALSE; lamp2 := TRUE;
+		
+	ELSE
+		lamp0 := FALSE; lamp1 := FALSE; lamp2 := FALSE;
+		
+	END_CASE;
+
+	c0 := c0 + 1;
+	
+END_IF;
+```
+
+## 타이머
+![[Pasted image 20260811143846.png]]
