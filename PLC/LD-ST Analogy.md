@@ -11,10 +11,10 @@ if po and p1:
 else:
 	p21 = False
 ```
-1. 기본적으로 False로 초기화 되어있으며 입력디바이스(p0, 01)는 임의로 변경 가능한 값이다.
-2. 크게 `while True:`로 감싸져 있다고 생각하자.
-3. 래더의 한 렁은 독립적인 조건문 `if, else`과 같다. 
-4. 병렬 연결은 조건문의 or에 해당하며, 직렬 연결은 조건문의 and에 해당한다.
+1. **기본적으로 False로 초기화 되어있으며 입력디바이스(p0, 01)는 임의로 변경 가능한 값이다.**
+2. **크게 `while True:`로 감싸져 있다고 생각하자.**
+3. **래더의 한 렁은 독립적인 조건문 `if, else`과 같다.** 
+4. **병렬 연결은 조건문의 or에 해당하며, 직렬 연결은 조건문의 and에 해당한다.**
 
 
 ## 자기유지
@@ -118,4 +118,35 @@ END_IF;
 ```
 
 ## 타이머
-![[Pasted image 20260811143846.png]]
+![[Pasted image 20260811172140.png]]
+
+```pascal
+ton0(IN:=lamp0, PT:=T#10S);
+r_trig_0(CLK:=btn0);
+
+IF  r_trig_0.Q THEN
+	lamp0 := TRUE;
+END_IF;
+
+IF ton0.Q THEN
+	lamp0 := FALSE;
+END_IF;
+```
+`p20`이 Timer를 활성화 하는것은 `ton0`인스턴스를 생성하면서 지정한다.
+각 렁마다 if문이 하나씩 들어가는것을 확인할 수 있다.
+**펄스신호의 경우 else문이 사용되지 않는다.**
+
+![[Pasted image 20260811172557.png]]
+
+
+![[Pasted image 20260811173322.png]]
+```pascal
+ton0(IN:=(btn0 AND btn1), PT:=T#5S);
+
+IF ton0.Q THEN
+	lamp0 := TRUE;
+ELSE
+	lamp0 := FALSE;
+END_IF;
+```
+![[Pasted image 20260811173635.png]]
