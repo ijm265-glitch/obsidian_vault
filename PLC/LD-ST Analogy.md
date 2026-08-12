@@ -353,11 +353,9 @@ END_IF;
 ![[Pasted image 20260812155936.png]]
 
 ```pascal
-// 1. 하강 엣지 감지 및 타이머 실행
-f_trig_0(CLK := btn0);
-ton0(IN := btn0, PT := T#7S);
-toff0(IN := f_trig_0.Q, PT := T#3S); // 버튼을 떼면 f_trig_0.Q가 켜지면서 3초간 toff0.Q 유지
 
-// 2. 램프 조건 하나로 결합 (이중 대입 방지)
-lamp0 := (btn0 AND (ton0.ET >= T#3S AND ton0.ET < T#7S)) OR toff0.Q;
 ```
+
+> **LD의 이중코일 문제와 같이 출력이 무시되는 문제가 발생할 수 있음**
+> **따라서 반드시 출력은 한 곳에서만 정해져야 한다.**
+> 
