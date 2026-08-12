@@ -254,4 +254,21 @@ IF flag0 THEN
 	END_IF;
 END_IF;
 ```
-Preset Time이 경과한 Timer를 초기화 하기 위해서 Timer의 IN(Condition)에 TImer의 출력을 넣음으로서 출력이 발생 (TRUE)가 되면 초기화가 발생한다.
+Preset Time이 경과한 Timer를 초기화 하기 위해서 Timer의 IN(Condition)에 TImer의 출력을 넣음으로서 출력이 발생 (TRUE)가 되면 초기화된다. 
+
+![[Pasted image 20260812135738.png]]
+![[Pasted image 20260812140154.png]]
+
+```pascal
+toff0(IN:=btn0, PT:=T#5S);
+
+IF toff0.Q THEN
+	lamp0 := TRUE;
+ELSE
+	lamp0 := FALSE;
+	
+END_IF;
+```
+
+![[Pasted image 20260812141211.png]]
+ 
