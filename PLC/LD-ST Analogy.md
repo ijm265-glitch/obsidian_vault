@@ -367,6 +367,20 @@ lamp0 := (btn0 AND (ton0.ET >= T#3S AND ton0.ET < T#7S)) OR (NOT btn0 AND toff0.
 
 ![[Pasted image 20260812170312.png]]
 
+### Elapsed Time을 활용하는 방법
 ```pascal
+r_trig_0(CLK:=btn0);
+ton0(IN:=is_running, PT:=T#6S);
 
+IF r_trig_0.Q THEN
+	is_running := TRUE;
+END_IF;
+
+IF ton0.Q THEN
+	is_running := FALSE;
+END_IF;
+
+lamp0 := is_running AND (ton0.ET >= T#0S AND ton0.ET < T#2S);
+lamp1 := is_running AND (ton0.ET >= T#2S AND ton0.ET < T#4S);
+lamp2 := is_running AND (ton0.ET >= T#4S AND ton0.ET < T#6S); 
 ```
