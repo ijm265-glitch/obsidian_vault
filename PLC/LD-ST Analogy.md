@@ -233,5 +233,25 @@ END_IF;
 ![[Pasted image 20260812123750.png]]![[Pasted image 20260812124127.png]]
 
 ```pascal
+ton0(IN:=flag0 AND NOT ton0.Q, PT:=T#5S);
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
 
+IF r_trig_0.Q THEN
+	flag0 := TRUE;
+END_IF;
+
+IF r_trig_1.Q THEN
+	flag0 := FALSE;
+END_IF;
+
+IF flag0 THEN
+	IF (ton0.ET > T#0S AND ton0.ET <= T#1S) OR
+   	(ton0.ET > T#2S AND ton0.ET <= T#3S) THEN
+		lamp0 := TRUE;
+	ELSE
+		lamp0 := FALSE;
+	END_IF;
+END_IF;
 ```
+Preset Time이 경과한 Timer를 초기화 하기 위해서 Timer의 IN(Condition)에 TImer의 출력을 넣음으로서 출력이 발생 (TRUE)가 되면 초기화가 발생한다.
