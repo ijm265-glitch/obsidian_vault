@@ -351,3 +351,13 @@ END_IF;
 `btn0` 의 `rising`을 감지하면 신호가 끊어지도록 하여 타이머를 초기화시키는 방법
 
 ![[Pasted image 20260812155936.png]]
+
+```pascal
+// 1. 하강 엣지 감지 및 타이머 실행
+f_trig_0(CLK := btn0);
+ton0(IN := btn0, PT := T#7S);
+toff0(IN := f_trig_0.Q, PT := T#3S); // 버튼을 떼면 f_trig_0.Q가 켜지면서 3초간 toff0.Q 유지
+
+// 2. 램프 조건 하나로 결합 (이중 대입 방지)
+lamp0 := (btn0 AND (ton0.ET >= T#3S AND ton0.ET < T#7S)) OR toff0.Q;
+```
