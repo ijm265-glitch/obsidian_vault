@@ -149,4 +149,54 @@ ELSE
 	lamp0 := FALSE;
 END_IF;
 ```
-![[Pasted image 20260811173635.png]]
+![[Pasted image 20260812092057.png]]
+![[Pasted image 20260812092147.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=flag0, PT:=T#10S);
+
+IF r_trig_0.Q THEN
+	flag0 := TRUE;
+END_IF;
+	
+IF ton0.Q THEN
+	lamp0 := TRUE;
+ELSE
+	lamp0 := FALSE;
+END_IF;
+
+IF r_trig_1.Q THEN
+	flag0 := FALSE;
+END_IF;
+```
+
+![[Pasted image 20260812092536.png]]![[Pasted image 20260812093607.png]]
+
+```pascal
+ton0(IN:=(btn0 AND NOT ton1.Q), PT:=T#1S);
+ton1(IN:=(btn0 AND ton0.Q), PT:=T#1S);
+
+IF (btn0 AND NOT ton0.Q) THEN
+	lamp0 := TRUE;
+ELSE
+	lamp0 := FALSE;
+END_IF;
+		
+IF (btn0 AND ton0.Q) THEN
+	lamp1 := TRUE;
+ELSE
+	lamp1 := FALSE;
+END_IF;
+```
+### 플리커 동작
+`btn0`가 활성화 되어있을 때만 작동하므로 `btn0`옆의 조건만 확인하면 된다.
+1. `btn0`가 활성화 되어 있으면 초기 `ton1.Q`는 `False`이므로 `ton0.Q`가 1초 후 활성화 된다. 
+2. `ton0.Q`가 활성화 되므로  조건에 따라 `ton1.Q`도 1초 후 활성화 된다.
+3. `ton1.Q`가 활성화되면 `ton0`의 입력조건이 `FALSE`가 되어 비활성화 된다. 
+4. `ton0.Q`가 `FALSE`가 되었으므로 `ton1`의 조건도 `FALSE`가 되어 비활성화된다.
+5. 이에 따라 `ton0`의 조건이 다시 만족되어 다시 `ton0`가 작동한다.
+`ton0`는 `btn0`가 활성화 된 시점에서 1초동안 `FALSE`, 1초동안 `TRUE`를 반복한다. 
+이를 이용하여 플리커를 구성한다. 
+
