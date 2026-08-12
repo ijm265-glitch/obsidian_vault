@@ -310,5 +310,26 @@ END_IF;
 ![[Pasted image 20260812142517.png]]
 
 ```pascal
+f_trig_0(CLK:=btn0);
 
+IF f_trig_0.Q THEN
+	t0 := DWORD_TO_TIME(TIME_TO_DWORD(t0) - TIME_TO_DWORD(ton0.ET));
+	ET := DWORD_TO_TIME(TIME_TO_DWORD(ET) + TIME_TO_DWORD(ton0.ET));
+END_IF;
+	
+IF ton0.Q THEN
+	lamp0 := TRUE;
+	
+ELSE
+	lamp0 := FALSE;
+	
+END_IF;
+
+ton0(IN:=btn0, PT:= t0);
 ```
+
+>**`ton0`의 실행 조건이 FALSE가 되어 정보가 사라지기전에 데이터를 대입해야 하므로 `ton0`를 가장 아래에 둔다.** 
+>**TIME타입의 변수는 비교연산자는 가능하지만 산술연산자는 불가능하므로 DWORD타입으로 바꾸어 연산한다음 다시 TIME타입으로 바꾸어 대입해준다**
+
+### Retrigerble Timer
+![[Pasted image 20260812152208.png]]
