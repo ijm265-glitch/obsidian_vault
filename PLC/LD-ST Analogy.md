@@ -97,26 +97,25 @@ END_IF;
 
 ## 순차 점등
 ![[Pasted image 20260811141920.png]]
+
 ```pascal
-r_trig_0(CLK:=btn0);
+// 1. 버튼 상승 엣지 감지
+r_trig_0(CLK := btn0);
 
+// 2. [상태 제어] 버튼을 누를 때만 카운터(c0) 변경 및 0, 1, 2 순환
 IF r_trig_0.Q THEN
-	
-	CASE c0 OF
-		0 : lamp0 := TRUE; lamp1 := FALSE; lamp2 := FALSE;
-		1 : lamp0 := FALSE; lamp1 := TRUE; lamp2 := FALSE;
-		2 : lamp0 := FALSE; lamp1 := FALSE; lamp2 := TRUE;
-		
-	ELSE
-		lamp0 := FALSE; lamp1 := FALSE; lamp2 := FALSE;
-		
-	END_CASE;
-
-	c0 := c0 + 1;
-	
+    c0 := c0 + 1;
+    IF c0 > 2 THEN
+        c0 := 0; // 0 -> 1 -> 2 -> 0 -> 1 ... 순환
+    END_IF;
 END_IF;
-```
 
+// 3. [출력 제어] c0 값에 따라 매 스캔마다 램프 상태 결정 (이중 코일 완벽 방지)
+lamp0 := (c0 = 0);
+lamp1 := (c0 = 1);
+lamp2 := (c0 = 2);
+```
+> **상태 변경과 출력 제어를 완전히 분리하여 작성할 것**
 ## 타이머
 ![[Pasted image 20260811172140.png]]
 
@@ -353,9 +352,21 @@ END_IF;
 ![[Pasted image 20260812155936.png]]
 
 ```pascal
+ton0(IN:=btn0, PT:=T#7S);
+f_trig_0(CLK:=btn0);
+toff0(IN:=f_trig_0.Q, PT:=T#3S);
 
+//btn0이 TRUE일 때 ton0.ET가 T#3S이상 T#7S미만일 때 또는 떠난걸 감지 (f_trig)하면 3초동안 램프 동작
+lamp0 := (btn0 AND (ton0.ET >= T#3S AND ton0.ET < T#7S)) OR (NOT btn0 AND toff0.Q);
 ```
 
 > **LD의 이중코일 문제와 같이 출력이 무시되는 문제가 발생할 수 있음**
 > **따라서 반드시 출력은 한 곳에서만 정해져야 한다.**
-> 
+
+### 순차점등
+
+![[Pasted image 20260812170312.png]]
+
+```pascal
+
+```
