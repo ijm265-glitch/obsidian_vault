@@ -333,3 +333,21 @@ ton0(IN:=btn0, PT:= t0);
 
 ### Retrigerble Timer
 ![[Pasted image 20260812152208.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+ton0(IN:= NOT r_trig_0.Q AND flag0, PT:=T#10S);
+
+IF r_trig_0.Q THEN
+	flag0 := TRUE;
+END_IF;
+
+IF ton0.Q THEN
+	lamp0 := TRUE;
+ELSE
+	lamp0 := FALSE;
+END_IF;
+```
+`btn0` 의 `rising`을 감지하면 신호가 끊어지도록 하여 타이머를 초기화시키는 방법
+
+![[Pasted image 20260812155936.png]]
