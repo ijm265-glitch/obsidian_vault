@@ -271,4 +271,44 @@ END_IF;
 ```
 
 ![[Pasted image 20260812141211.png]]
- 
+
+```pascal
+ton0(IN:=flag0, PT:=T#6S);
+f_trig_0(CLK:=btn0);
+
+IF f_trig_0.Q THEN
+	flag0 := TRUE;
+END_IF;
+
+IF flag0 THEN
+	
+	IF ton0.ET >= T#0S AND ton0.ET < T#2S THEN
+		lamp0 := TRUE;
+	ELSE
+		lamp0 := FALSE;
+	END_IF;
+		
+	IF ton0.ET >= T#0S AND ton0.ET < T#4S THEN
+		lamp1 := TRUE;
+	ELSE
+		lamp1 := FALSE;
+	END_IF;
+	
+	IF ton0.ET >= T#0S AND ton0.ET < T#6S THEN
+		lamp2 := TRUE;
+	ELSE
+		lamp2 := FALSE;
+	END_IF;
+	
+END_IF;
+
+IF ton0.Q THEN
+	flag0 := FALSE;
+END_IF;
+```
+### Retentive Timer
+![[Pasted image 20260812142517.png]]
+
+```pascal
+
+```
