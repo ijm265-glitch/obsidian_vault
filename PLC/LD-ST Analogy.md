@@ -202,4 +202,36 @@ END_IF;
 
 ![[Pasted image 20260812121649.png]]
 
-![[Pasted image 20260812122028.png]]
+
+![[Pasted image 20260812123429.png]]
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=flag0 AND NOT ton1.Q, PT:=T#2S);
+ton1(IN:=flag0 AND ton0.Q, PT:=T#1S);
+
+IF r_trig_0.Q THEN
+	flag0 := TRUE;
+END_IF;
+
+IF r_trig_1.Q THEN
+	flag0 := FALSE;
+END_IF;	
+
+IF flag0 THEN
+	IF NOT ton0.Q THEN
+		lamp0 := TRUE;
+		lamp1 := FALSE;
+	ELSE
+		lamp0 := FALSE;
+		lamp1 := TRUE;
+		
+	END_IF;
+END_IF;
+```
+
+![[Pasted image 20260812123750.png]]![[Pasted image 20260812124127.png]]
+
+```pascal
+
+```
