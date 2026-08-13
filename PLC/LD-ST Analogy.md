@@ -384,3 +384,27 @@ lamp0 := is_running AND (ton0.ET >= T#0S AND ton0.ET < T#2S);
 lamp1 := is_running AND (ton0.ET >= T#2S AND ton0.ET < T#4S);
 lamp2 := is_running AND (ton0.ET >= T#4S AND ton0.ET < T#6S); 
 ```
+
+### counter를 활용하는 법
+
+```pascal
+r_trig_0(CLK:=btn0);
+
+IF r_trig_0.Q AND c0 = 0 THEN
+	c0 := 1;
+ELSIF ton0.Q AND c0 = 1 THEN
+	c0 := 2;
+ELSIF ton0.Q AND c0 = 2 THEN
+	c0 := 3;
+ELSIF ton0.Q AND c0 = 3 THEN
+	c0 := 0; // IDLE
+END_IF;
+	
+ton0(IN:=(c0>=1) AND NOT ton0.Q, PT:=T#2S);
+
+lamp0 := c0 = 1;
+lamp1 := c0 = 2;
+lamp2 := c0 = 3;
+```
+
+![[Pasted image 20260812173416.png]]
