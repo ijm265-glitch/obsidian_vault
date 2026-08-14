@@ -408,3 +408,34 @@ lamp2 := c0 = 3;
 ```
 
 ![[Pasted image 20260812173416.png]]![[Pasted image 20260814093238.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=is_running0, PT:=T#2S);
+ton1(IN:=ton0.Q, PT:=T#2S);
+ton2(IN:=is_running1, PT:=T#2S);
+ton3(IN:=ton2.Q, PT:=T#2S);
+
+IF r_trig_0.Q THEN
+	is_running0 := TRUE;
+	is_running1 := FALSE;
+END_IF;
+
+IF r_trig_1.Q THEN
+	is_running0 := FALSE;
+	is_running1 := TRUE;
+END_IF;
+
+IF is_running0 THEN
+	lamp0 := TRUE;
+	lamp1 := ton0.Q;
+	lamp2 := ton1.Q;
+END_IF;
+
+IF is_running1 THEN
+	lamp0 := FALSE;
+	lamp1 := NOT ton2.Q;
+	lamp2 := NOT ton3.Q;
+END_IF;
+```
