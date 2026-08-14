@@ -407,4 +407,4 @@ lamp1 := c0 = 2;
 lamp2 := c0 = 3;
 ```
 
-![[Pasted image 20260812173416.png]]
+![[Pasted image 20260812173416.png]]![[Pasted image 20260814093238.png]]
