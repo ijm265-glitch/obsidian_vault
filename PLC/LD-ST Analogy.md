@@ -510,3 +510,34 @@ END_IF;
 
 
 ![[Pasted image 20260814114001.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+ton0(IN:=is_running AND NOT ton0.Q, PT:=T#8S);
+
+//STATE, INPUT, TRANSITION
+IF r_trig_0.Q AND NOT is_running THEN
+	is_running := TRUE;
+ELSIF r_trig_0.Q AND is_running THEN
+	is_running := FALSE;
+END_IF;
+
+IF is_running THEN
+	lamp0 := ton0.ET >= T#0S AND ton0.ET < T#2S;
+	lamp1 := (ton0.ET >= T#2S AND ton0.ET < T#4S) OR (ton0.ET >= T#6S AND ton0.ET < T#8S);
+	lamp2 := ton0.ET >= T#2S AND ton0.ET < T#8S ;
+	
+ELSE
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+	lamp2 := FALSE;
+		
+END_IF;
+```
+
+>비교 연산의 결과를 바로 대입함으로써 간결한 코드를 구성 가능
+>역시 플래그를 사용하였기 때문에 IF ELSE로 모든 케이스를 정리
+
+
+![[Pasted image 20260814115236.png]]
+
