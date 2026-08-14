@@ -448,3 +448,33 @@ END_CASE;
 > FSM 기반 프로그래밍으로 State, Input, Transition, Action을 나누어 생각할 것
 
 ![[Pasted image 20260814105123.png]]![[Pasted image 20260814105540.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=(mode=1) AND NOT ton2.Q, PT:=T#2S);
+ton1(IN:=ton0.Q, PT:=T#2S);
+ton2(IN:=ton1.Q, PT:=T#2S);
+
+// STATE, INPUT, ACTION
+IF r_trig_0.Q AND (mode = 0) THEN
+	mode := 1; // RUNNING
+ELSIF r_trig_1.Q AND (mode = 1) THEN
+	mode := 0; // IDLE
+END_IF;
+
+// ACTION, 
+CASE mode OF
+	0: 
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+		
+	1: 
+		lamp0 := NOT ton0.Q;
+		lamp1 := ton0.Q AND NOT ton1.Q;
+		lamp2 := ton1.Q AND NOT ton2.Q;
+END_CASE;
+```
+
+![[Pasted image 20260814111543.png]]![[Pasted image 20260814112200.png]]
