@@ -478,3 +478,35 @@ END_CASE;
 ```
 
 ![[Pasted image 20260814111543.png]]![[Pasted image 20260814112200.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+ton0(IN:= is_running AND NOT ton2.Q, PT:=T#2S);
+ton1(IN:= ton0.Q, PT:=T#2S);
+ton2(IN:= ton1.Q, PT:=T#2S);
+ton3(IN:= ton2.Q, PT:=T#2S);
+
+
+// STATE, INPUT, TRANSITION
+IF r_trig_0.Q AND NOT is_running THEN
+	is_running := TRUE;
+ELSIF r_trig_0.Q AND is_running THEN
+	is_running := FALSE;
+END_IF;
+
+//ACTION
+IF is_running THEN
+	lamp0 := NOT ton0.Q;
+	lamp1 := (ton0.Q AND NOT ton1.Q) OR (ton2.Q AND NOT ton3.Q);
+	lamp2 := ton1.Q AND NOT ton2.Q;
+ELSE
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+	lamp2 := FALSE;
+END_IF;
+```
+> FLAG를 사용한 FSM Based Programming.
+> 2가지 경우 뿐이므로 IF ELSE로 표현이 가능하였다.
+
+
+![[Pasted image 20260814114001.png]]
