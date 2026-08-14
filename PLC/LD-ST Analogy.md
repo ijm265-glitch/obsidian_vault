@@ -1,3 +1,6 @@
+> 분명한 Analogy가 존재하지만 
+> ST는 ST의 방식 (Finite State Machine based) 으로 작성하는것이 가독성이 좋고 오류를 적게 발생시키는 코드를 구성할 수 있음
+
 ## 직렬, 병렬 연결
 ![[Pasted image 20260811103619.png]]
 ```python
@@ -409,33 +412,39 @@ lamp2 := c0 = 3;
 
 ![[Pasted image 20260812173416.png]]![[Pasted image 20260814093238.png]]
 
+
 ```pascal
 r_trig_0(CLK:=btn0);
 r_trig_1(CLK:=btn1);
-ton0(IN:=is_running0, PT:=T#2S);
+ton0(IN:=mode=1, PT:=T#2S);
 ton1(IN:=ton0.Q, PT:=T#2S);
-ton2(IN:=is_running1, PT:=T#2S);
+ton2(IN:=mode=2, PT:=T#2S);
 ton3(IN:=ton2.Q, PT:=T#2S);
 
-IF r_trig_0.Q THEN
-	is_running0 := TRUE;
-	is_running1 := FALSE;
+IF r_trig_0.Q AND (mode = 0) THEN
+    mode := 1; // 정방향 점등
+ELSIF r_trig_1.Q AND (mode = 1) THEN
+    mode := 2; // 정방향 소등
+ELSIF ton3.Q AND (mode = 2) THEN
+    mode := 0; // IDLE
 END_IF;
 
-IF r_trig_1.Q THEN
-	is_running0 := FALSE;
-	is_running1 := TRUE;
-END_IF;
-
-IF is_running0 THEN
-	lamp0 := TRUE;
-	lamp1 := ton0.Q;
-	lamp2 := ton1.Q;
-END_IF;
-
-IF is_running1 THEN
-	lamp0 := FALSE;
-	lamp1 := NOT ton2.Q;
-	lamp2 := NOT ton3.Q;
-END_IF;
+CASE mode OF
+    0:
+        lamp0 := FALSE;
+        lamp1 := FALSE;
+        lamp2 := FALSE;
+    1:
+        lamp0 := TRUE;
+        lamp1 := ton0.Q;
+        lamp2 := ton1.Q;
+    2:
+        lamp0 := FALSE;
+        lamp1 := NOT ton2.Q;
+        lamp2 := NOT ton3.Q;
+END_CASE;
 ```
+
+> FSM 기반 프로그래밍으로 State, Input, Transition, Action을 나누어 생각할 것
+
+![[Pasted image 20260814105123.png]]![[Pasted image 20260814105540.png]]
