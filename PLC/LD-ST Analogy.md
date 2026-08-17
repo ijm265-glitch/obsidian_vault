@@ -551,7 +551,9 @@ END_IF;
 
 ![[Pasted image 20260817144613.png]]
 
-
+![[Pasted image 20260817150953.png]]
+![[Pasted image 20260817150959.png]]
+![[Pasted image 20260817151011.png]]
 
 ```pascal
 // State, Input, Transition, Action
@@ -584,7 +586,6 @@ ELSIF (mode >= 1 AND r_trig_0.Q) OR counter = 3 THEN
 	mode := 0; //IDLE 
 
 END_IF;
-
 
 // ACTION
 CASE mode OF 
