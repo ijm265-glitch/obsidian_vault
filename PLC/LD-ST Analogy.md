@@ -657,3 +657,32 @@ END_CASE;
 ```
 
 ![[Pasted image 20260817165945.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+ton0(IN:=mode=1 AND NOT ton0.Q, PT:=T#2S);
+ton1(IN:=mode=2 AND NOT ton1.Q, PT:=T#2S);
+
+IF r_trig_0.Q THEN
+	mode := 1;
+ELSIF r_trig_1.Q THEN
+	mode := 2;
+ELSIF mode >= 1 AND r_trig_2.Q THEN
+	mode := 0;
+END_IF;
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+	1:
+		lamp0 := ton0.ET < T#1S;
+		lamp1 := FALSE;
+	2:
+		lamp0 := FALSE;
+		lamp1 := ton1.ET < T#1S;
+END_CASE;
+```
+
