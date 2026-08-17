@@ -541,3 +541,82 @@ END_IF;
 
 ![[Pasted image 20260814115236.png]]
 
+
+
+
+
+
+
+
+
+![[Pasted image 20260817144613.png]]
+
+
+
+```pascal
+// State, Input, Transition, Action
+// IDLE, SPEAK0~3, SCORING: 6 STATES
+r_trig_0(CLK:=btn0); // RESET
+r_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+r_trig_4(CLK:=btn4);
+r_trig_5(CLK:=btn5);
+f_trig_0(CLK:=lamp2 AND mode = 5);
+ton1(IN:=mode=1, PT:=T#2S);
+ton2(IN:=mode=2, PT:=T#2S);
+ton3(IN:=mode=3, PT:=T#2S);
+ton4(IN:=mode=4, PT:=T#2S);
+ton5(IN:=mode=5 AND NOT ton5.Q, PT:=T#2S);
+
+// TRANSITION, INPUT, STATE
+IF mode = 0 AND r_trig_1.Q THEN
+	mode := 1; // SPEAK0
+ELSIF mode = 0 AND r_trig_2.Q THEN
+	mode := 2; //SPEAK1
+ELSIF mode = 0 AND r_trig_3.Q THEN
+	mode := 3; //SPEAK2
+ELSIF mode = 0 AND r_trig_4.Q THEN
+	mode := 4; //SPEAK3
+ELSIF r_trig_5.Q THEN
+	mode := 5; // SCORING
+ELSIF (mode >= 1 AND r_trig_0.Q) OR counter = 3 THEN
+	mode := 0; //IDLE 
+
+END_IF;
+
+
+// ACTION
+CASE mode OF 
+	0:
+		counter := 0;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+		lamp3 := FALSE;
+		lamp4 := FALSE;
+		lamp5 := FALSE;
+	
+	1:
+		lamp1 := NOT ton1.Q;
+		
+	2:
+		lamp2 := NOT ton2.Q;
+		
+	3:
+		lamp3 := NOT ton3.Q;
+		
+	4:
+		lamp4 := NOT ton4.Q;
+
+	5:
+		IF f_trig_0.Q THEN
+			counter := counter + 1;
+		END_IF;
+		
+		lamp1 := ton5.ET < T#1S;
+		lamp2 := ton5.ET >= T#1S;
+		lamp3 := ton5.ET < T#1S;
+		lamp4 := ton5.ET >= T#1S;
+		lamp5:= TRUE;
+END_CASE;
+```
