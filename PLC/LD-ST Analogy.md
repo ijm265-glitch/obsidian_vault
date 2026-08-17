@@ -699,3 +699,17 @@ lamp0 := counter >= 4;
 ```
 
 ![[Pasted image 20260817183533.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+toff0(IN:=r_trig_0.Q, PT:=T#2S);
+
+IF r_trig_0.Q THEN
+	counter := counter + 1;
+END_IF;
+
+lamp0 := toff0.Q;
+lamp1 := counter >= 2;
+```
+
+![[Pasted image 20260817190228.png]]
