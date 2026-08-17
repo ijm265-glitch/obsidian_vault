@@ -712,4 +712,123 @@ lamp0 := toff0.Q;
 lamp1 := counter >= 2;
 ```
 
-![[Pasted image 20260817190228.png]]
+![[Pasted image 20260817190228.png]]![[Pasted image 20260817191925.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=lamp0);
+ton0(IN:=is_running AND NOT ton0.Q, PT:=T#2S);
+
+IF r_trig_0.Q AND is_running = FALSE THEN
+	is_running := TRUE;
+ELSIF r_trig_0.Q AND is_running = TRUE THEN
+	is_running := FALSE;
+	counter := 0;
+END_IF;
+
+IF r_trig_1.Q THEN
+	counter := counter + 1;
+END_IF;
+
+lamp0 := is_running AND ton0.ET < T#1S;
+
+r_trig_1(CLK:=lamp0);
+
+lamp1 := is_running AND (ton0.ET < T#1S) AND (counter MOD 3 = 0);
+
+```
+
+![[Pasted image 20260817193825.png]]
+
+![[Pasted image 20260817193817.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=lamp0);
+
+ton0(IN:=is_running AND NOT ton0.Q, PT:=T#2S);
+toff0(IN:=r_trig_0.Q, PT:=T#2S);
+
+IF r_trig_0.Q AND is_running = FALSE THEN
+	is_running := TRUE;
+ELSIF r_trig_0.Q AND is_running = TRUE THEN
+	is_running := FALSE;
+	counter := 0;
+END_IF;
+
+lamp0 := is_running AND ton0.ET < T#1S;
+
+r_trig_1(CLK:=lamp0);
+
+IF r_trig_1.Q THEN
+	counter := counter + 1;
+END_IF;
+
+lamp1 := is_running  AND (counter MOD 3 = 0);
+```
+
+![[Pasted image 20260817195152.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+ton0(IN:= mode=2 AND NOT ton0.Q, PT:=T#2S);
+
+IF r_trig_0.Q AND mode = 0 THEN
+	mode := 1;
+ELSIF r_trig_1.Q AND mode = 1 THEN
+	mode := 2;
+ELSIF r_trig_2.Q AND mode = 2 THEN
+	mode := 0;
+END_IF;
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		
+	1:
+		lamp0 := TRUE;
+		lamp1 := FALSE;
+	
+	2:
+		lamp0 := FALSE;
+		lamp1 := ton0.ET < T#1S;
+END_CASE;
+```
+
+![[Pasted image 20260817200157.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+
+ton0(IN:= mode=1 AND NOT ton0.Q, PT:=T#2S);
+ton1(IN:= mode=2 AND NOT ton1.Q, PT:=T#3S);
+
+IF r_trig_0.Q THEN
+	mode := 1;
+ELSIF r_trig_1.Q THEN
+	mode := 2;
+ELSIF r_trig_2.Q THEN
+	mode := 0;
+END_IF;
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		
+	
+	1:
+		lamp0 := ton0.ET < T#1S;
+		
+		
+	2:
+		lamp0 := ton1.ET < T#2S;
+		
+END_CASE;
+```
+
+![[Pasted image 20260817201039.png]]
