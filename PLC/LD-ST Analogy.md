@@ -686,3 +686,16 @@ CASE mode OF
 END_CASE;
 ```
 
+![[Pasted image 20260817183119.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+
+IF r_trig_0.Q THEN
+	counter := counter + 1;
+END_IF;
+
+lamp0 := counter >= 4;
+```
+
+![[Pasted image 20260817183533.png]]
