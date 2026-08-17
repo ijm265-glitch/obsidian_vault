@@ -541,7 +541,41 @@ END_IF;
 
 ![[Pasted image 20260814115236.png]]
 
+```pascal
+r_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=mode=1 AND lamp0, PT:=T#2S);
+ton1(IN:=mode=1 AND lamp1, PT:=T#2S);
+ton2(IN:=mode=2 AND NOT lamp2, PT:=T#2S);
+ton3(IN:=mode=2 AND NOT lamp1, PT:=T#2S);
 
+IF mode = 0 AND r_trig_0.Q THEN
+	mode := 1;
+ELSIF mode = 1 AND r_trig_1.Q THEN
+	mode := 2;
+ELSIF mode = 2 AND ton3.Q THEN
+	mode := 0;
+END_IF;
+
+CASE mode OF 
+
+	0: 
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+	
+	1:
+		lamp0 := TRUE;
+		lamp1 := ton0.Q;
+		lamp2 := ton1.Q;
+		
+	2: 
+		lamp0 := NOT ton3.Q;
+		lamp1 := NOT ton2.Q;
+		lamp2 := FALSE;
+		
+END_CASE;
+```
 
 
 
@@ -621,3 +655,5 @@ CASE mode OF
 		lamp5:= TRUE;
 END_CASE;
 ```
+
+![[Pasted image 20260817165945.png]]
