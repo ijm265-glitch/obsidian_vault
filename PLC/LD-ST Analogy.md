@@ -1487,5 +1487,32 @@ END_CASE;
 ![[Pasted image 20260818164915.png]]
 
 ```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
 
+ton0(IN:= NOT ton0.Q, PT:= T#2S);
+lamp0 := ton0.ET <= T#1S;
+
+IF r_trig_0.Q AND NOT is_running THEN
+	is_running := TRUE;
+	
+ELSIF r_trig_0.Q AND is_running THEN
+	counter := (counter + 1) MOD 4;
+
+ELSIF r_trig_1.Q AND is_running THEN
+	is_running := FALSE;
+	counter := 0;
+END_IF;
+
+lamp1 := is_running AND counter = 0;
+lamp2 := is_running AND (counter = 1 OR counter = 3);
+lamp3 := is_running AND counter = 2;
 ```
+
+![[Pasted image 20260818171821.png]]
