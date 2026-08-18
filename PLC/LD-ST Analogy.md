@@ -1484,3 +1484,8 @@ CASE mode OF
 END_CASE;
 ```
 
+![[Pasted image 20260818164915.png]]
+
+```pascal
+
+```
