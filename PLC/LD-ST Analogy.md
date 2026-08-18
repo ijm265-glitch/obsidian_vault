@@ -1139,3 +1139,35 @@ END_IF;
 ```
 
 ![[Pasted image 20260818123825.png]]
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+ton0(IN:= counter_flag AND is_running, PT:=T#7S);
+ton1(IN:=lamp2, PT:=T#5S);
+
+IF r_trig_0.Q AND NOT is_running THEN 
+	is_running := TRUE;
+ELSIF r_trig_1.Q THEN
+	counter0 := counter0 + 1;
+END_IF;
+
+counter_flag := counter0 >= 3;
+
+IF counter_flag AND is_running THEN
+	lamp0 := ton0.ET < T#5S;
+	lamp1 := ton0.ET >= T#1S AND ton0.ET < T#6S;
+	lamp2 := ton0.ET >= T#2S AND ton0.ET < T#7S;
+	
+	IF ton0.Q THEN
+		counter0 := 0;
+		is_running := FALSE;
+	END_IF;
+	
+ELSE
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+	lamp2 := FALSE;
+END_IF;
+```
