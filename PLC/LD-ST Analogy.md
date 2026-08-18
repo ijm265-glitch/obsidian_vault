@@ -1396,3 +1396,44 @@ END_CASE;
 ```
 
 ![[Pasted image 20260818150920.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+ton0(IN:=mode=1 AND NOT ton0.Q, PT:=T#3S);
+ton1(IN:=mode=2 AND NOT ton1.Q, PT:=T#3S);
+ton2(IN:=NOT ton2.Q, PT:=T#3S);
+
+lamp7 := ton2.ET < T#2S;
+IF mode=0 AND f_trig_0.Q THEN
+	mode := 1;
+ELSIF mode = 1 AND f_trig_0.Q THEN
+	mode := 2;
+ELSIF mode = 2 AND f_trig_0.Q THEN
+	mode := 1;
+ELSIF mode >= 1 AND r_trig_1.Q THEN
+	mode := 0;
+END_IF;
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+	
+	1:
+		lamp0 := (ton0.ET >= T#0S AND ton0.ET < T#1S);
+		lamp1 := (ton0.ET >= T#1S AND ton0.ET < T#2S);
+		lamp2 := (ton0.ET >= T#2S AND ton0.ET < T#3S);
+		
+	2:
+		lamp0 := (ton1.ET >= T#2S AND ton1.ET < T#3S);
+		lamp1 := (ton1.ET >= T#1S AND ton1.ET < T#2S);
+		lamp2 := (ton1.ET >= T#0S AND ton1.ET < T#1S);
+	
+END_CASE;
+```
