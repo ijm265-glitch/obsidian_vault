@@ -832,3 +832,117 @@ END_CASE;
 ```
 
 ![[Pasted image 20260817201039.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+
+ton0(IN:=(mode=1) AND (NOT ton0.Q), PT:=T#2S);
+ton1(IN:=(mode=2) AND (NOT ton1.Q), PT:=T#2S);
+
+// STATE, INPUT, TRANSITION
+IF f_trig_0.Q AND mode = 0 THEN
+	mode := 1;
+ELSIF r_trig_0.Q AND mode = 1 THEN
+	mode := 2;
+ELSIF r_trig_1.Q AND mode = 2 THEN
+	mode := 0;
+END_IF;
+
+// ACTION
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+	
+	1:
+		lamp0 := ton0.ET < T#1S;
+		lamp1 := ton0.ET >= T#1S;
+		lamp2 := FALSE;
+	
+	2:
+		lamp0 := FALSE;
+		lamp1 := ton1.ET >= T#1S;
+		lamp2 := ton1.ET < T#1S;
+
+END_CASE;
+```
+
+![[Pasted image 20260818093034.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+
+IF r_trig_0.Q THEN
+	counter := counter + 1;
+END_IF;
+
+IF r_trig_1.Q THEN
+	counter := 0;
+END_IF;
+
+lamp0 := counter >= 2;
+lamp1 := counter >= 3;
+lamp2 := counter >= 4;
+```
+
+![[Pasted image 20260818093623.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=lamp0, PT:=T#1S);
+ton1(IN:=lamp1 AND NOT ton1.Q, PT:=T#2S);
+
+IF f_trig_0.Q THEN
+	counter := counter + 1;
+END_IF;
+
+IF r_trig_1.Q THEN
+	counter := 0;
+END_IF;
+
+lamp0 := counter >= 3;
+lamp1 := lamp0 AND ton0.Q;
+lamp2 := ton1.ET >= T#1S;
+```
+
+![[Pasted image 20260818094125.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+ton0(IN:=is_running AND is_switching AND NOT ton0.Q, PT:=T#4S);
+
+
+IF r_trig_0.Q AND NOT is_running THEN
+	is_running := TRUE;
+ELSIF r_trig_0.Q AND is_running THEN
+	is_running := FALSE;	
+	is_switching := FALSE;
+END_IF;
+
+IF r_trig_1.Q AND NOT is_switching THEN
+	is_switching := TRUE;
+END_IF;
+
+	
+
+IF is_running AND NOT is_switching THEN
+	lamp0 := TRUE;
+	lamp1 := FALSE;
+ELSIF is_running AND is_switching THEN
+	lamp0 := ton0.ET < T#2S;
+	lamp1 := ton0.ET >= T#2S;
+ELSIF NOT is_running AND NOT is_switching THEN
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+END_IF;
+```
+![[Pasted image 20260818095239.png]]
