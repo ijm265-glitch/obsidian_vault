@@ -969,3 +969,49 @@ lamp2 := counter_flag  AND ton0.ET < T#1S AND ton1.Q;
 ```
 
 ![[Pasted image 20260818100435.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+ton0(IN:=mode=1, PT:=T#4S);
+ton1(IN:=mode=2, PT:=T#4S);
+
+IF f_trig_0.Q THEN
+	counter := counter + 1;	
+END_IF;
+counter_flag := counter >= 2;
+
+IF counter_flag AND mode = 0 THEN
+	mode := 1;
+	
+ELSIF counter_flag AND r_trig_1.Q AND mode = 1 THEN
+	mode := 2;
+	
+ELSIF ton1.Q AND mode = 2 THEN
+	mode := 0; // IDLE
+	counter := 0;
+
+END_IF;
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+		
+	1:
+		lamp0 := ton0.ET < T#2S;
+		lamp1 := ton0.ET >= T#2S AND NOT ton0.Q;
+		lamp2 := ton0.Q;
+		
+	2:
+		lamp0 := ton1.ET >= T#2S;
+		lamp1 := ton1.ET < T#2S;
+		lamp2 := FALSE;
+	
+END_CASE;
+```
+
+![[Pasted image 20260818111440.png]]
