@@ -1437,3 +1437,50 @@ CASE mode OF
 	
 END_CASE;
 ```
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+
+ton0(IN:=NOT ton0.Q, PT:=T#1S);
+r_trig_3(CLK:=ton0.Q);
+ton2(IN:=NOT ton2.Q, PT:=T#3S);
+
+lamp7 := ton2.ET < T#2S;
+
+IF r_trig_3.Q THEN
+	counter := (counter + 1) MOD 3;
+END_IF;
+
+IF mode = 0 AND f_trig_0.Q THEN
+	mode := 1;
+ELSIF mode = 1 AND f_trig_0.Q THEN
+	mode := 2;
+ELSIF mode = 2 AND f_trig_0.Q THEN
+	mode := 1;
+ELSIF mode >= 1 AND r_trig_1.Q THEN
+	mode := 0;
+END_IF;
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+	
+	1:
+		lamp0 := counter = 0;
+		lamp1 := counter = 1;
+		lamp2 := counter = 2;
+		
+	2:
+		lamp0 := counter = 2;
+		lamp1 := counter = 1;
+		lamp2 := counter = 0;
+END_CASE;
+```
+
