@@ -1171,3 +1171,5 @@ ELSE
 	lamp2 := FALSE;
 END_IF;
 ```
+
+![[Pasted image 20260818132721.png]]
