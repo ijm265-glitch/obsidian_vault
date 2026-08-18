@@ -1015,3 +1015,58 @@ END_CASE;
 ```
 
 ![[Pasted image 20260818111440.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+ton0(IN:=btn0, PT:=T#3S);
+ton1(IN:=btn1, PT:=T#3S);
+ton2(IN:=is_running, PT:=T#4S);
+
+IF ton0.Q AND NOT is_running THEN
+	is_running := TRUE;
+
+ELSIF ton1.Q AND is_running THEN
+	is_running := FALSE;
+
+END_IF;
+
+IF is_running THEN
+	lamp0 := TRUE;
+	lamp1 := ton2.ET >= T#2S;
+	lamp2 := ton2.Q;
+
+ELSE 
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+	lamp2 := FALSE;
+	
+END_IF;
+```
+
+![[Pasted image 20260818114649.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+ton0(IN:=is_running, PT:=T#13S);
+
+IF r_trig_0.Q THEN
+	is_running := NOT is_running;
+	
+END_IF;
+
+IF is_running THEN
+	lamp0 := (ton0.ET >= T#0S AND ton0.ET < T#3S) OR (ton0.ET >= T#10S AND ton0.ET < T#13S);
+	lamp1 := (ton0.ET >= T#3S AND ton0.ET < T#6S) OR (ton0.ET >= T#7S AND ton0.ET < T#10S);
+ELSE
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+END_IF;
+```
+
+![[Pasted image 20260818115734.png]]
