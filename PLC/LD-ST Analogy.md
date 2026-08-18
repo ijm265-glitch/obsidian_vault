@@ -946,3 +946,26 @@ ELSIF NOT is_running AND NOT is_switching THEN
 END_IF;
 ```
 ![[Pasted image 20260818095239.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+ton0(IN:=counter_flag AND NOT ton0.Q, PT:=T#2S);
+ton1(IN:=counter_flag, PT:=T#2S);
+
+IF f_trig_0.Q THEN
+	counter := counter + 1;
+ELSIF f_trig_1.Q THEN
+	counter := 0;
+END_IF;
+
+counter_flag := counter >= 3;
+
+lamp0 := counter_flag AND ton0.ET < T#1S;
+lamp1 := counter_flag  AND ton0.ET >= T#1S;
+lamp2 := counter_flag  AND ton0.ET < T#1S AND ton1.Q;
+```
+
+![[Pasted image 20260818100435.png]]
