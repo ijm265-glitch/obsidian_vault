@@ -1173,3 +1173,107 @@ END_IF;
 ```
 
 ![[Pasted image 20260818132721.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+ton0(IN:= mode=1, PT:=T#7S);
+ton1(IN:= mode=2, PT:=T#5S);
+
+IF mode = 0 AND r_trig_0.Q THEN
+	mode := 1;
+
+ELSIF mode = 0 AND r_trig_1.Q THEN
+	mode := 2;
+	
+ELSIF mode = 1 AND ton0.Q THEN
+	mode := 0;
+	
+ELSIF mode = 2 AND ton1.Q THEN
+	mode := 0;
+
+ELSIF r_trig_2.Q THEN
+	mode := 0;
+	
+END_IF;
+
+CASE mode OF
+	
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+	
+	1: 
+		lamp0 := (ton0.ET >= T#0S AND ton0.ET < T#5S);
+		lamp1 := (ton0.ET >= T#1S AND ton0.ET < T#6S);
+		lamp2 := (ton0.ET >= T#2S AND ton0.ET < T#7S);
+	
+	
+	2:
+		lamp0 := (ton1.ET >= T#2S AND ton1.ET < T#7S);
+		lamp1 := (ton1.ET >= T#1S AND ton1.ET < T#6S);
+		lamp2 := (ton1.ET >= T#0S AND ton1.ET < T#5S);
+	
+END_CASE;
+```
+
+![[Pasted image 20260818134221.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+ton0(IN:=is_running AND NOT ton0.Q, PT:=T#2S);
+
+
+IF r_trig_0.Q THEN
+	is_running := NOT is_running;
+END_IF;
+
+IF is_running THEN
+	lamp0 := ton0.ET < T#1S;
+	
+END_IF;
+
+lamp1 := btn0;
+```
+
+![[Pasted image 20260818135546.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+ton0(IN:=is_running AND NOT ton0.Q, PT:=T#2S);
+ton1(IN:=is_running, PT:=T#2S);
+
+
+IF r_trig_0.Q THEN
+	is_running := NOT is_running;
+END_IF;
+
+IF is_running THEN
+	lamp0 := ton0.ET < T#1S;
+	lamp1 := ton0.ET >= T#1S;
+	lamp2 := ton0.ET < T#1S AND ton1.Q;
+
+ELSE
+	lamp0 := FALSE;
+	lamp1 := FALSE;
+	lamp2 := FALSE;
+	
+END_IF;
+```
+
+![[Pasted image 20260818140230.png]]
