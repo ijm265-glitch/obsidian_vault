@@ -1678,3 +1678,8 @@ lamp0 := mode=1 AND NOT ton0.Q;
 lamp1 := mode=2 AND NOT ton1.Q;
 lamp2 := mode=3 AND NOT ton2.Q;
 ```
+![[Pasted image 20260819103334.png]]
+
+```pascal
+
+```
