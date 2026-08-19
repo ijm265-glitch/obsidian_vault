@@ -1775,4 +1775,36 @@ lamp1 := (ton0.ET > T#4S AND ton0.ET <= T#7S)
 ```
 ![[Pasted image 20260819110836.png]]
 
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
+
+lamp0 := btn0;
+
+IF r_trig_0.Q AND mode = 0 THEN
+	counter := counter + 1;
+	mode := 1;
+ELSIF r_trig_0.Q AND mode = 1 THEN
+	counter := counter + 1;
+ELSIF f_trig_0.Q AND counter = 4 AND mode = 1THEN
+	mode := 2;
+ELSIF r_trig_1.Q THEN
+	counter := 0;
+	mode := 0;
+END_IF;
+
+lamp0 := mode=1 AND btn0;
+lamp1 := counter >=4;
+lamp2 := mode=2;
+```
 ![[Pasted image 20260819110858.png]]
+
+```pascal
+
+```
