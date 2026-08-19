@@ -1556,5 +1556,125 @@ END_IF;
 
 ![[Pasted image 20260819091609.png]]
 
-0, 1, *2*, 3, **4**, 5, *6*
-0, 1, 0, 1, 0, 1 ,0
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
+r_trig_4(CLK:=counter_mod = 1);
+f_trig_4(CLK:=toff0.Q);
+toff0(IN:=btn1, PT:=T#4S);
+
+IF r_trig_0.Q THEN
+	counter := counter + 1;
+END_IF;
+
+counter_mod := counter MOD 2;
+
+IF r_trig_4.Q THEN
+	counter_flag := NOT counter_flag;
+END_IF;
+
+IF (mode = 0 OR mode = 2) AND counter_mod = 0 AND counter_flag THEN
+	mode := 1;
+ELSIF mode = 1 AND counter_mod = 0 AND NOT counter_flag THEN
+	mode := 2;
+ELSIF mode >= 1 AND r_trig_1.Q THEN
+	mode := 3;
+ELSIF mode = 3 AND f_trig_4.Q THEN
+	mode := 0;
+	counter := 0;
+	counter_mod := 0;
+	counter_flag := FALSE;
+END_IF;
+
+
+CASE mode OF 
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+		
+	
+	1:
+		lamp0 := TRUE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;	
+	
+	2:
+		lamp0 := FALSE;
+		lamp1 := TRUE;
+		lamp2 := FALSE;
+	
+	3:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := NOT btn1 AND toff0.Q;
+END_CASE;
+```
+
+![[Pasted image 20260819100513.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
+r_trig_4(CLK:=counter_mod = 1);
+f_trig_4(CLK:=toff0.Q);
+toff0(IN:=btn1, PT:=T#4S);
+
+IF r_trig_0.Q THEN
+	counter0 := counter0 + 1;
+	counter1 := 0;
+ELSIF r_trig_1.Q THEN
+	counter1 := counter1 + 1;
+	counter0 := 0;
+ELSIF r_trig_2.Q OR (counter0 >= 4) OR (counter1 >= 4)THEN
+	counter0 := 0;
+	counter1 := 0;
+END_IF;
+
+lamp0 := (counter0 = 1) OR (counter1 = 3);
+lamp1 := (counter0 = 2) OR (counter1 = 2);
+lamp2 := (counter0 = 3) OR (counter1 = 1);
+```
+
+![[Pasted image 20260819101253.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
+
+ton0(IN:=mode=1, PT:=T#3S);
+ton1(IN:=mode=2, PT:=T#3S);
+ton2(IN:=mode=3, PT:=T#3S);
+
+IF r_trig_0.Q THEN
+	mode := 1;
+ELSIF r_trig_1.Q THEN
+	mode := 2;
+ELSIF r_trig_2.Q THEN
+	mode := 3;
+ELSIF ton0.Q OR ton1.Q OR ton2.Q THEN
+	mode := 0;
+END_IF;
+
+lamp0 := mode=1 AND NOT ton0.Q;
+lamp1 := mode=2 AND NOT ton1.Q;
+lamp2 := mode=3 AND NOT ton2.Q;
+```
