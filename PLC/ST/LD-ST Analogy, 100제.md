@@ -1806,5 +1806,79 @@ lamp2 := mode=2;
 ![[Pasted image 20260819110858.png]]
 
 ```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
+ton0(IN:=mode=3, PT:=T#99S);
+ton1(IN:=mode=4 AND NOT ton2.Q, PT:=T#1S);
+ton2(IN:=mode=4 AND ton1.Q, PT:=t);
+ton3(IN:=mode=2 AND NOT ton3.Q, PT:=T#2S);
+r_trig_4(CLK:=lamp1);
+f_trig_4(CLK:=lamp1);
 
+IF mode = 0 AND r_trig_0.Q THEN
+	counter0 := counter0 + 1;
+
+ELSIF mode = 0 AND counter0 >= 2 THEN
+	mode := 1;
+	//counter0 := 0;
+
+ELSIF mode = 1 AND r_trig_1.Q THEN
+	counter1 := counter1 + 1;
+
+ELSIF mode = 1 AND counter1 >= 2 THEN
+	mode := 2;
+	//counter1 := 0;
+	
+ELSIF r_trig_2.Q AND mode = 2 THEN
+	mode := 3;
+	
+ELSIF f_trig_2.Q AND mode = 3 THEN
+	t := ton0.ET;
+	mode := 4;
+	
+ELSIF counter = 3 AND mode = 4 THEN
+	mode := 0;
+	counter := 0;
+	counter0 := 0;
+	counter1 := 0;	
+END_IF;
+
+IF mode = 4 AND f_trig_4.Q THEN
+	counter := counter + 1;
+END_IF;
+
+
+CASE mode OF
+	0:
+		lamp0 := FALSE;
+		lamp1 := FALSE;
+		lamp2 := FALSE;
+		
+	1:
+		lamp0 := TRUE;
+		lamp1 := FALSE;
+		lamp2 := TRUE;
+	
+	2:
+		lamp0 := ton3.ET >= T#1S;
+		lamp1 := FALSE;
+		lamp2 := TRUE;
+
+	3:
+		lamp0 := FALSE;
+		lamp1 := btn2;
+		lamp2 := TRUE;
+	
+	4:
+		lamp0 := FALSE;
+		lamp1 := ton1.Q;
+		lamp2 := TRUE;
+		
+END_CASE;
 ```
