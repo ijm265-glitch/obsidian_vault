@@ -1516,3 +1516,41 @@ lamp3 := is_running AND counter = 2;
 ```
 
 ![[Pasted image 20260818171821.png]]
+
+```pascal
+r_trig_0(CLK:=btn0);
+f_trig_0(CLK:=btn0);
+r_trig_1(CLK:=btn1);
+f_trig_1(CLK:=btn1);
+r_trig_2(CLK:=btn2);
+f_trig_2(CLK:=btn2);
+r_trig_3(CLK:=btn3);
+f_trig_3(CLK:=btn3);
+
+ton0(IN:= NOT ton0.Q, PT:= T#5S);
+lamp0 := (ton0.ET <= T#1S) OR (ton0.ET > T#2S AND ton0.ET <= T#4S);
+
+ton1(IN:=is_running AND NOT ton4.Q, PT:=T#2S);
+ton2(IN:=ton1.Q, PT:=T#2S);
+ton3(IN:=ton2.Q, PT:=T#2S);
+ton4(IN:=ton3.Q, PT:=T#2S);
+
+IF f_trig_0.Q AND NOT is_running THEN
+	is_running := TRUE;
+ELSIF r_trig_1.Q AND is_running THEN
+	is_running := FALSE;
+END_IF;
+
+IF is_running THEN
+	lamp1 := ton2.Q AND NOT ton3.Q;
+	lamp2 := (ton1.Q AND NOT ton2.Q) OR (ton3.Q AND NOT ton4.Q);
+	lamp3 := NOT ton1.Q;
+
+ELSE
+	lamp1 := FALSE;
+	lamp2 := FALSE;
+	lamp3 := FALSE;
+
+END_IF;
+```
+
