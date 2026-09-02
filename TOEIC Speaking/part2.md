@@ -55,6 +55,7 @@ in the background, i can see some trees and buildings
 
 **마무리**
 it seems like they're having a good time
+it seems like they're having a monotonous day
 it seems like they're busy
 
 [[part2 연습]]
