@@ -36,6 +36,8 @@ He is handing over some money to a woman
 He is spraying water onto the car
 he is watering the plants
 he is moving a box
+- he is loading a box into the car
+- he is unloading a box from the trunk of a car
 he is walking a dog
 she is pushing a stroller
 they are facing each other
