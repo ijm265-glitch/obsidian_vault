@@ -10,3 +10,5 @@ second it is essential when it comes to ~
 Actually, when i was in college ~
 i was really helpful
 that's why i think so
+
+[[Part 5 연습]]
