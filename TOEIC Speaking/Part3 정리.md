@@ -3,6 +3,12 @@ When eating breakfast, do you prefer eating at home or at a restaurant Why?
 I prefer eating at home. because i don't have to waste time going to a restaurant. also, i can save money, because it's much cheaper to have breakfast at home
 ```
 
+```
+i prefer eating at a restaurant 
+because it's more convenient than eating at home. i don't have to wash the dishes and actually i'm currently looking for a job so i don't much time.
+that's why i prefer eating at a restaurant
+```
+
 
 Should students be allowed to use public transportation for free? Why or why not?
 ```
@@ -48,4 +54,22 @@ when choosing a new instrument to start playing how fast i can learn it would af
 because i'm currently looking for a job, i don't have enough time to practice 
 also i don't get streesed out while learning an instrument
 that's why it is the most important factor for me
+```
+Which of the following do you usually do with your family on traditional holidays, and why?
+- Cooking and eating traditional food
+- Going on a vacation
+- Playing games together
+
+```
+i usually cook and eat tradtional food
+first, personally i like cooking. so, it's really fun
+also if we cook together, we can create good memeries 
+that's why i prefer cooking tradional food
+```
+
+```
+i usually play games with my family
+first, it's fun to play games together
+also we don't have much time to spend together
+so, playing games with my family helps us create good memories
 ```
