@@ -3,7 +3,7 @@
 1. 논리적으로 생각해서 답변하기
 2. 나의 경험상 가능하다는걸 말하기
 	- i mean it's all about confidence, when i was in college ~~
-3. 조사에 따르면 - 권위 빌리기
+3. 조사에 따르면 - 사례, 뉴스 등등
 	- according to research, many successful speakers have one thing in common. they all practiced a lot before giving a presentation 
 	- for example steve jobs was known for rehearsing his presentations many times 
 	- that's why i think practice is the most important factor when it comes to public speaking

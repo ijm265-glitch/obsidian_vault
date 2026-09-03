@@ -65,3 +65,53 @@ second, there are many artists known for their repetitive practice
 it is strong evidence that anyone can become a succesful artist if they work hard enough
  
 ```
+
+
+**When solving difficult problems, talking with other people is helpful**
+```
+i agree that taking with other people is helpful when solving difficult problems
+first, it helps us broaden our perspectives
+if we share our issues with others, we can get diverse viewpoints and fresh insights
+it is very helpful for finding solutions
+
+second, it is essential when it comes to creativity
+when i was in college, i took part in a CFD team project
+at first, i had hard time solving technical problems.
+however, by discussing them with teammates, i was able to come up with creative ideas and solve the problems
+that's why i think so
+```
+
+**Which of the following skills is the most important for a business leader's success?**
+**· Communication skills · Problem-solving skills · Negotiation skills**
+
+```
+i think communication skils are the most important factor
+first, it can contribute to creating good work atmoshphere
+when teammates are in trouble, good leaders can talk to them and help them find solutions
+
+also it's crucial when it comes to preventing misunderstanding
+for example, when i was on a team project in college. 
+our leader clearly explained our goals and listened to everyone's opinions
+thanks to that we were able to finish our project succesfully
+that's why ~
+
+
+```
+
+```
+i think problem-solving skills are the most important factor
+first, most of all teams often face a variety of problems
+in such situations, a good leader can help teammates find effective solutions quickly
+it's essential for team's success
+
+also, it's crucial when it comes to overcoming technical challenges
+when i was in college, i took part in a CFD team project
+when i was struggling with modeling and meshing problems, our leader introduce alternative ways 
+thanks to that, we can finish the project sucecssfully 
+
+that's why i believe ~
+~ 
+
+
+ 
+```
