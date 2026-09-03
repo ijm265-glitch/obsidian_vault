@@ -142,3 +142,63 @@ that's why i think small goals are effective
 ```
 
 
+**학교 자판기 설치?**
+- 설치하면 편하게 이용가능 - 만족도 증가 - 생산성 증가
+- 설치하면 시간 절약 가능 -
+```
+They will be satisfied with the school environment
+They will be satisfied with the work environment
+Then there will be more positive and energetic
+They so they can focus on their work better
+```
+
+**직원 자판기 설치?**
+- 설치하면 편하게 이용 가능 - 만족도 증가 - 생산성 증가
+
+**실용성 교육 (요리, 청소, 집안일, 등등)<-> 아카데믹 교육**
+- 재미있음 -> 스트레스 감소 -> 학업에 더 집중 -> 효율성
+- 다양한 기회를 접해야 함 - 나의 케이스는 학교에서 컴퓨터 접함 - > 컴퓨터 잘 하게 됨
+
+**행복 <-> 돈**
+- 행복하기 위해 돈을 버는거임 
+- 내가 지금 돈이 좀 있는데 그렇게 행복하지 않음
+- 삶의 의미가 없다고 느낌
+
+**혼자 <-> 같이**
+혼자 - 개인적으로 introvert임 - 온전히 그 일에 집중할 수 있음, 같이 하는거 distracting - 효율성 증가 - 
+같이 - 개인적으로 extrovert임 - i enjoy working with others - we can Divide the work and save time
+We can divide the work based on each person's strengths
+
+**사업 혼자 <-> 같이**
+혼자
+의사결정 혼자서 가능 - 시장이 급변함 - 이점이 있음
+it is beneficial when it comes to decision making - nowadays markets are highly competitive and always changing - do a business alone - i can make a quick decision - it's really effective these days
+
+분쟁 피할 수 있음 - 일에 집중 - 생산성 향상
+second, I can avoid conflicts
+so i can fully focus on work 
+i would lead to higher productivity
+
+같이
+문제발생 - 문제에 대한 아이디어 공유 - 보다 좋은 결정 - 생산성
+Share ideas and make good decisions
+
+강점에 따른 업무 분배 - 생산성 향상
+Divide the work based on strengths
+
+
+**환경보호정책**
+- 환경보호 해야한다 
+- climate change is a serious issue these days. Especially, 
+- Nepal recently suffered a catastrophic flood
+- Therefore we must introduce  environmental policies before it's too late
+
+- The hotter the weather gets, the more we use the air conditioning.
+- it accelerates climate change
+- Therefore we must introduce strict environmental policies before it's too late
+
+
+**조언**
+They have a lot of experience so they can give a lot of advice
+I feel comfortable I can be honest with them
+They know my personality well
