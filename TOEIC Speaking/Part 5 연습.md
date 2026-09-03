@@ -123,3 +123,20 @@ when i was on a team project in college, i was struggling with modeling and mesh
 once i talked about them with leader, i was able to find solutions 
 that's why i think problem-solving skills are the most essential
 ```
+
+**Do you think it is more effective to set several small goals or to set one large goal when working on a project?**
+
+작은 목표 - 목표 달성 쉬움 - 성취감 - 동기부여 - 더 쉽게 목표 달성
+작은 목표 - 효율성 - 대학교 - 빠르게 프로젝트 완료
+
+```
+i agree that it's more effective to set several small golas when working on a project
+first, if we set small goals, it gets much easier to archieve our goals
+it gives us a sense of accomplishment so we can be motivated 
+as a result, we can reach our final goal more quickly
+
+second, it is essential when it comes to efficiency
+when i was on a team project in college, i set small goals for programming 
+then i could complete the system more quickly
+that's why i think small goals are effective
+```
