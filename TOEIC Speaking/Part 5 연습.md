@@ -1,5 +1,7 @@
 
 **People need to have some boring time occasionally.**
+필요하다 - 요즘 사람들 지치고 스트레스 받는다 - 릴렉스 가능 - 생산성
+창의성 - 내가 대학교때 
 ```
 주장: I agree that people need to have some [boring time / boredom /downtime / free time / idle time] occasionally. 
 
@@ -36,6 +38,8 @@ for example, steve jobs, one of the best speakers was known for his repetitive r
 
 **Would you rather take a single extended vacation once a year or take several short trips over the year?**
 
+길게 휴식 - 휴식에 전념 - 일에 더 집중 - 생산성
+짧게 쉬는건 스트레스임 - 대학교 짧게 쉼 - 쉴때마다 일 걱정 
 ```
 i would rather take a single extended vacation 
 there are some reasons
@@ -53,6 +57,8 @@ that's why i think so
 **Some people think anyone can become a successful artist if they work hard enough.**
 **Others think people need to be born with artistic talent.**
 
+연습하면 - 스킬이 증가 - 중학교 미술 - 연습으로 get a top grade
+많은 연습으로 유명한 예술가들이 있음 - 강한증거임
 ```
 i agree that anyone can become a succesful artist if they work hard enough
 first, Practice makes Perfect. 
@@ -68,6 +74,10 @@ it is strong evidence that anyone can become a succesful artist if they work har
 
 
 **When solving difficult problems, talking with other people is helpful**
+
+도움된다 - 시각을 확장 - 공유하면 - 다양한 관점, 신선한 관점 - 문제해결 도움
+효율적 문제해결에 중요 - 대학교 팀 프로젝트트
+
 ```
 i agree that taking with other people is helpful when solving difficult problems
 first, it helps us broaden our perspectives
@@ -83,35 +93,33 @@ that's why i think so
 
 **Which of the following skills is the most important for a business leader's success?**
 **· Communication skills · Problem-solving skills · Negotiation skills**
-
+커뮤 - 팀원들이 문제 있을 때 대화 - 문제 해결 도와줌
+효율성 - 대학교 팀프로젝트 - 설명 잘해줘서 빨리 끝남
 ```
 i think communication skils are the most important factor
 first, it can contribute to creating good work atmoshphere
 when teammates are in trouble, good leaders can talk to them and help them find solutions
 
-also it's crucial when it comes to preventing misunderstanding
+also it's crucial when it comes to efficiency
 for example, when i was on a team project in college. 
 our leader clearly explained our goals and listened to everyone's opinions
-thanks to that we were able to finish our project succesfully
+thanks to that we were able to finish our project quickly
 that's why ~
-
-
 ```
+
+
+팀분위기 조성 - 문제 해결 잘하면 - 팀원들이 의지 - 컴포터블 - 생산성
+기술적 문제 극복 도움 - 대학교 팀프로젝트 - 문제 해결 도움 받음
+
 
 ```
 i think problem-solving skills are the most important factor
-first, most of all teams often face a variety of problems
-in such situations, a good leader can help teammates find effective solutions quickly
-it's essential for team's success
+first i can contribute to creating a godd work atmoshphere
+if leaders are good at solving problems, teammates can rely on them
+so they can be more comfortable and it leads to higher productivity
 
-also, it's crucial when it comes to overcoming technical challenges
-when i was in college, i took part in a CFD team project
-when i was struggling with modeling and meshing problems, our leader introduce alternative ways 
-thanks to that, we can finish the project sucecssfully 
-
-that's why i believe ~
-~ 
-
-
- 
+second, it is essential when it comes to overcoming difficult technical challenges
+when i was on a team project in college, i was struggling with modeling and meshing problems
+once i talked about them with leader, i was able to find solutions 
+that's why i think problem-solving skills are the most essential
 ```
