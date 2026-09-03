@@ -48,3 +48,20 @@ when i was in college i took a short trip while handling a lot of tasks
 at that time i had to worry about work even during the break. so i couldn't relax at all
 that's why i think so
 ```
+
+
+**Some people think anyone can become a successful artist if they work hard enough.**
+**Others think people need to be born with artistic talent.**
+
+```
+i agree that anyone can become a succesful artist if they work hard enough
+first, Practice makes Perfect. 
+if we practice regularly, we can imporve the skills.
+actually, when i was in middle school, i couldn't get good grades in art class 
+that was so frustrating that i practiced hard every day
+that way, i could make it and get a top grade
+
+second, there are many artists known for their repetitive practice 
+it is strong evidence that anyone can become a succesful artist if they work hard enough
+ 
+```
