@@ -91,7 +91,7 @@ however, by discussing them with teammates, i was able to come up with creative 
 that's why i think so
 ```
 
-**Which of the following skills is the most important for a business leader's success?**
+**Which of the following skills is thpe most imortant for a business leader's success?**
 **· Communication skills · Problem-solving skills · Negotiation skills**
 커뮤 - 팀원들이 문제 있을 때 대화 - 문제 해결 도와줌
 효율성 - 대학교 팀프로젝트 - 설명 잘해줘서 빨리 끝남
@@ -140,3 +140,5 @@ when i was on a team project in college, i set small goals for programming
 then i could complete the system more quickly
 that's why i think small goals are effective
 ```
+
+
