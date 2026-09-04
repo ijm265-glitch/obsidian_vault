@@ -108,3 +108,7 @@ at own pace -> 작품에 집중 가능
 fam mem
 날 잘 알아 -> 나에게 적합한 조언
 아빠는 30년 일했어 -> 많이 알아 > 좋은 조언 
+
+
+thank to ai > 일 빨리 끝냄 > 쉬는 시간 확보
+내가 college > read papers > 
