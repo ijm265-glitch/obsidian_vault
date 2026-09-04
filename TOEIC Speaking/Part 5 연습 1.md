@@ -90,3 +90,8 @@ second, we need strict environmental policies
 
 
 **리뷰**
+
+
+
+연습이 완벽 > 내가 대학교 때 > 요리 못했음 > 연습했음 > 꽤 잘함
+어떤 유명한 요리사를 앎 > 미각이 없음 > 그럼에도 유명한 요리사 > 연습 
