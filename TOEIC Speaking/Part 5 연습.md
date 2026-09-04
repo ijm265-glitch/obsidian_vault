@@ -191,7 +191,7 @@ Divide the work based on strengths
 - 환경보호 해야한다 
 - climate change is a serious issue these days. Especially, 
 - Nepal recently suffered a catastrophic flood
-- Therefore we must introduce  environmental policies before it's too late
+- given that situation, we must introduce  environmental policies before it's too late
 
 - The hotter the weather gets, the more we use the air conditioning.
 - it accelerates climate change
@@ -202,3 +202,30 @@ Divide the work based on strengths
 They have a lot of experience so they can give a lot of advice
 I feel comfortable I can be honest with them
 They know my personality well
+
+친한사람 - 편안함 느낌 - 솔직해질 수 있음 - ~에 좋음 
+i feel more comfortable so i can be honest with them
+it is helpful when it comes to finding right solutions
+
+they know me well so they can give me a lot of advice considering my situation
+친한사람 - 날 잘 알고 있음 - 내 상황을 고려한 많은 조언을 해줄 수 있음
+
+**리뷰**
+**"I think reviews are the most important."**
+_(저는 리뷰가 가장 중요하다고 생각합니다.)_
+
+**"Here's why."**
+_(그 이유는 다음과 같습니다.)_
+
+**"Actually, I usually check online reviews when it comes to choosing something."**
+_(사실, 저는 무언가를 고를 때 보통 온라인 리뷰를 확인합니다.)_
+
+**"Because in most cases, they are honest."**
+_(왜냐하면 대부분의 경우 리뷰들은 솔직하기 때문입니다.)_
+
+**"So, I can trust them."**
+_(그래서 저는 그것들을 신뢰할 수 있습니다.)_
+
+**"If there are many positive reviews, I can make a decision with confidence."**
+
+_(긍정적인 리뷰가 많으면, 편안한 마음으로 결정을 내릴 수 있습니다.)_
