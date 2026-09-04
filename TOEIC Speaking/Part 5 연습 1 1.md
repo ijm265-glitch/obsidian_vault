@@ -94,5 +94,7 @@
 
 **The advancement of technology makes it difficult for people to balance their work routine and personal life.**
 
+기술의 발전 > 일을 더 빨리 끝냄 > 자유 시간 > 효율성 증가
+대학교 시절 > 1시간내 많은 페이퍼 > 빠르게 프로젝트 끝냄
 
 **Do you think it is more important for parents to teach their children time-management skills or polite behavior? Why?**
