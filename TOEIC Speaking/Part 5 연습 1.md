@@ -100,3 +100,6 @@ second, we need strict environmental policies
 
 온라인 - 효율성 측면 - 바쁘다 - 직접가는데 시간낭비 x 
 at own pace -> 작품에 집중 가능
+
+작은 목표 -> 달성 쉬움 > 동기 부여 > 생산성 증가
+작은 목표 > 큰 쉽게 목표 달성 
