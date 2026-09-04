@@ -105,10 +105,25 @@ at own pace -> 작품에 집중 가능
 작은 목표 > 큰 쉽게 목표 달성 
 
 
-fam mem
+**Which of the following do you think is the most effective when seeking career advice?**
+- Family members
+- Co-workers
+- Professional consultants
+
 날 잘 알아 -> 나에게 적합한 조언
 아빠는 30년 일했어 -> 많이 알아 > 좋은 조언 
 
 
+**The advancement of technology makes it difficult for people to balance their work routine and personal life.**
+
 thank to ai > 일 빨리 끝냄 > 쉬는 시간 확보
 내가 college > read papers > 
+
+
+**Do you think it is more important for parents to teach their children time-management skills or polite behavior? Why?**
+
+
+polite behavior cannot be taught by others
+it's entirely up to the parents
+
+children forget what they learned over time
