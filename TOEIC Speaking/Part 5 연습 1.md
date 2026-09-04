@@ -95,3 +95,8 @@ second, we need strict environmental policies
 
 연습이 완벽 > 내가 대학교 때 > 요리 못했음 > 연습했음 > 꽤 잘함
 어떤 유명한 요리사를 앎 > 미각이 없음 > 그럼에도 유명한 요리사 > 연습 
+
+**Do you prefer exploring a museum online or visiting it in person? Why?**
+
+온라인 - 효율성 측면 - 바쁘다 - 직접가는데 시간낭비 x 
+at own pace -> 작품에 집중 가능
