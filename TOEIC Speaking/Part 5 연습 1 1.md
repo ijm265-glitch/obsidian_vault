@@ -102,12 +102,28 @@
 
 
 **Companies should provide free food for their employees during work hours**
-
+I agree with the statement There are few reasons why First in terms of efficiency it can be helpful if companies provide free food to their employees they don't have to go to the nearby convenience store or cafeteria so they can focus on the work better as a result it leads to higher productivity second they can be satisfied with the work environment so they can work more efficiently It is beneficial for efficiency
 
 
 **When you wanted to learn about current news and events, do you prefer using online websites or watching television news? why?**
+I prefer using online websites
+There are a few reasons why 
+First we can use time more efficiently 
+You watch television news you had to sit on the sofa and watch it till it ends whether it is not useful or not
+Second we can get information anytime anywhere on our smartphone 
+That's why I think so
 
 **Young people today experience more competition than previous generations**
+I agree with the statement 
+first They had to learn A lot of things
+for example the advancement of AI Forces young people to learn new technologies
+So they are always busy
+Second The market in Korea is shrinking these days
+Because of this shrinking market young people are having hard time looking for jobs
 
 **Do you think that traveling helps people learn new skills**
+I disagree with this statement There are few reasons why first 
+traveling is not helpful especially in the engineering field 
+It can be a waste of time If he wanted to learn practical skills
 
+Second the main purpose of traveling is relaxation not learning skills When traveling people focus on sightseeing and having on it's not helpful at all to learn anything
