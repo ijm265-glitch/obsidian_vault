@@ -98,3 +98,16 @@
 대학교 시절 > 1시간내 많은 페이퍼 > 빠르게 프로젝트 끝냄
 
 **Do you think it is more important for parents to teach their children time-management skills or polite behavior? Why?**
+
+
+
+**Companies should provide free food for their employees during work hours**
+
+
+
+**When you wanted to learn about current news and events, do you prefer using online websites or watching television news? why?**
+
+**Young people today experience more competition than previous generations**
+
+**Do you think that traveling helps people learn new skills**
+
