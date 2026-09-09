@@ -1,4 +1,4 @@
-![[Pasted image 20260819140117.png]]
+
 ![[Pasted image 20260820094135.png]]
 
 ### 1. 기본 통신 핀
