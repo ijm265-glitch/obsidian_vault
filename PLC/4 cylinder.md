@@ -8,7 +8,7 @@
 | 3        | P4         | P5         | P23  |      | Single |
 | 4        | P6         | P7         | P24  |      | Single |
 
-![[Pasted image 20260914150429.png]]
+
 
 FSM 기반으로 프로그래밍 할 것 
 State, Input, Transition, Action 
