@@ -8,3 +8,13 @@
 | 3        | P4         | P5         | P23  |      | Single |
 | 4        | P6         | P7         | P24  |      | Single |
 
+![[Pasted image 20260914150429.png]]
+
+FSM 기반으로 프로그래밍 할 것 
+State, Input, Transition, Action 
+![[Pasted image 20260914151038.png]]
+
+여기서 State는 10
+Input은 M1 (실린더1의 sens_work)
+Transition은 State 10에서 20으로
+Action은 state 10에서 p20을 작동시키는것
