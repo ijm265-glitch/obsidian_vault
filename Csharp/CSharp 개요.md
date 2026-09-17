@@ -1,3 +1,8 @@
+**📌 Phase 0. CSharp 구조**
+- [[CSharp 구조]]
+
+- [[CSharp 패키지]]
+
 **📌 Phase 1. CSharp 기초 & 메모리/타입 시스템**
 
 - [[CSharp 값 타입 vs 참조 타입 (Stack과 Heap)]]
