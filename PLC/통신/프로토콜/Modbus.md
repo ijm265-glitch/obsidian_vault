@@ -2,7 +2,7 @@
 
 마스터-슬레이브 구조로 되어있음
 
-Modbus RTU
+[[Modbus RTU]]
 - 규격 : RS-232, RS-485
 
 Modbus TCP
