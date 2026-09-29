@@ -4,7 +4,7 @@
 
 - 물리 계층의 이해 (RS-485 반이중(Half-Duplex) 통신 및 트랜시버 방향 제어)
     
-- 4대 메모리 맵(Coil, Discrete Input, Input Register, Holding Register)과 0-based vs 1-based 주소 표기법
+- [[4대 메모리 맵]](Coil, Discrete Input, Input Register, Holding Register)과 0-based vs 1-based 주소 표기법
     
 - T3.5, T1.5 시간 간격(Inter-frame delay)과 프레임 동기화 원리
     
