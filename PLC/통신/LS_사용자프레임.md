@@ -59,8 +59,14 @@ CRC-16 : `CA 65`
 **Body :** `Device_id` + `Function Code` + `Byte Count` + `Data`
 **Tail :** CRC-16
 
+#### Body
+![[Pasted image 20260929130119.png]]
 
+#### Tail
+![[Pasted image 20260929130133.png]]
 
+![[Pasted image 20260929130202.png]]
 
+설정에서 수신한 데이터를 D100과 D101에 저장하도록 한다.
 ### 프레임 모니터 접근
 온라인 - 통신모듈 설정 및 진단 - 시스템 진단 - 그림 우클릭 - 프레임 모니터
