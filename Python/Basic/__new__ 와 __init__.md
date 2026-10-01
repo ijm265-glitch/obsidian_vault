@@ -1,35 +1,28 @@
 ```python
-class Character_generator():
-	def __init__(self, hp, mp, atk, defence):
-		self.hp = hp
-		self.mp = mp
-		self.atk = atk
-		self.defence = defence
-		
-		print(f"{self} Initialization Complete")
+class Char_Gen():
+    def __init__(self, hp, mp, atk, agi):
+        self.hp = hp
+        self.mp = mp
+        self.atk = atk
+        self.agi = agi
 
-# instance = Character_generator(1, 2, 3, 4)와 동일
-# instance = type.__call__(Character_generator, 1, 2, 3, 4)
-instance = Character_generator.__new__(Character_generator) 
-if isinstance(instance, Character_generator):
-	Character_generator.__init__(instance, 1, 2, 3, 4)
-```
-```python
-# type 클래스 내부에 정의된 __call__의 동작 방식
-# 클래스를 호출하는 것의 목적이 온전한 인스턴스를 얻는 것이므로 type class의 __call__ 메서드는 메모리 할당과 초기화(속성설정)를 동시에 수행한다.
-class type:
+char1 = Char_Gen(1, 2, 3, 4)
+# char1 = type.__call__(Char_Gen, 1, 2, 3, 4)
+
+
+# Peusdo Code
+class type():
     def __call__(cls, *args, **kwargs):
-        # 1. 괄호로 호출된 대상(cls = Car)의 __new__를 호출하여 인스턴스를 생성
-        # 이때 cls가 첫 번째 인자로 전달
-        instance = cls.__new__(cls, *args, **kwargs)
-        # MRO에 따라 
+        instance = cls.__new__(cls, *args, **kwargs) # Memory Allocation
+        # MRO에 따라 object class의 __new__()를 사용
         # instance = object.__new__(cls, *args, **kwargs)
 
-        # 2. 만약 반환된 객체가 해당 클래스의 인스턴스라면 __init__ 호출
-        if isinstance(instance, cls):
-            cls.__init__(instance, *args, **kwargs)
+        if isinstance(instance, cls): # 클래스의 인스턴스가 생성되었으면
+            cls.__init__(instance, *args, **kwargs) 
+            # 클래스의 초기화자를 호출, 인스턴스를 인자로 넣어 속성 설정
+            
 
-        return instance
+        return instance # 메모리를 할당받고 속성 설정이 완료된 객체를 반환
 ```
 - **호출 시작**: `Character_generator(1, 2, 3, 4)`를 호출한다.
 
