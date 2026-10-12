@@ -8,4 +8,5 @@
 6. `Sub-Shape Binder`의 `Make Face`를 `False`로 설정
 7. `Binder`를 참고하여 그리고자 하는 부품을 다시 덧그리고` Pad Operation`등을 수행 
 
-
+![[Pasted image 20261011175630.png]]
+Simulation은 Assembly상태에서 상단 툴바의 Assembly - Simulation으로 동작을 부여 가능
