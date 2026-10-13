@@ -34,6 +34,8 @@
 		- `5`: 원점 복귀 중 (OPR)
 		- `6`: 위치결정 제어 중 (Positioning)		    
 		- `-1`: 에러 발생 상태
+
+	- `[Md.31]스테이터스` 
 ---
 ### 2. 제어 지령 변수 (PLC $\rightarrow$ 모듈)
 * **`RD77_1.bnPositioningStart[N_AXIS]` (BOOL)**
