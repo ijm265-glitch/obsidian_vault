@@ -19,6 +19,21 @@
 	* **버퍼 메모리 주소:** **`2400 + 100n` / `2401 + 100n**`
 	* (엔코더 기반 물리 실 현재값 `[Md.101]`인 경우: `2450 + 100n` / `2451 + 100n`)
 
+- `RD77_1.stnAxMntr[N_AXIS].uCurrentPositioningIdentifier`
+	* **파라미터명:** `[Md.47] 실행중 위치결정 데이터 : 운전 패턴 (Operation pattern)`
+	* **버퍼 메모리 주소:** **`2438 + 100n
+
+- `RD77_1.stnAxMntr[N_AXIS].wAxisOperationStatus`
+	- **파라미터명:**`[Md.26] 축 동작 상태`
+	- **버퍼 메모리 주소:** **`2409 + 100n`**
+		- `0`: 대기 (Standby)
+		- `1`: 정지 중 (Stopped)
+		- `2`: 보간 중 (Interpolating)
+		- `3`: JOG 운전 중 (JOG operation)
+		- `4`: 수동 펄서 운전 중 (Manual pulser operation)
+		- `5`: 원점 복귀 중 (OPR)
+		- `6`: 위치결정 제어 중 (Positioning)		    
+		- `-1`: 에러 발생 상태
 ---
 ### 2. 제어 지령 변수 (PLC $\rightarrow$ 모듈)
 * **`RD77_1.bnPositioningStart[N_AXIS]` (BOOL)**
